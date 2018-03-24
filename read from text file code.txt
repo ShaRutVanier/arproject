@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.IO;
+
+public class NewBehaviourScript : MonoBehaviour
+{ 
+    public TextAsset asset1;
+    private string text;
+    void Start()
+    {
+        text = asset1.text;
+        string[] thisarray = text.Split(' ');
+        List<string> lst1 = new List<string>();
+        lst1.AddRange(thisarray);
+        for(int x = 0; x < 8; x++)
+        {
+            print(lst1[x]);
+        }
+    }
+}
